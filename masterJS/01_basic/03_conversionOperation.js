@@ -32,5 +32,55 @@ console.log(typeof valueInNumber); //number
 let someNumber = 33;
 
 let stringNUmber = String(someNumber); //type conversion
-console.log(stringNUmber); //33
-console.log(typeof stringNUmber);
+// console.log(stringNUmber); //33
+// console.log(typeof stringNUmber);
+
+// ************************* Operations ********************************
+let value = 5;
+let negValue = -value; // -5
+
+//basic arthematic operations
+//console.log(2+2);
+//console.log(2-2);
+//console.log(2*2);
+//console.log(2**3);    => to raise to the power 3
+//console.log(2/2);
+//console.log(2%2);      => modulas/remainder of 2
+
+// let str1 = "Hello";
+// let str2 = " Shazil";
+
+// let str3 = str1 + str2; // concatinate
+// console.log(str3); //Hello Shazil.
+
+// console.log("1" + 2); //12
+// console.log(1 + "2"); //12
+// console.log("1" + 2 + 2); //122
+// console.log(1 + 2 + "2"); //32
+
+// console.log(ture); //true
+// console.log(+true); //1
+// // console.log(true+);   //error
+
+// console.log(+""); //0          => + converts string to boolea
+// console.log(+"1"); //1          => + converts string to boolea
+
+//prefix and postfix operator
+let gameCounter = 100;
+gameCounter++;
+console.log(gameCounter); //101
+
+//example
+let x = 3;
+const y = x++         //it first assign the value of x to y and then increment the value of x
+console.log(`x: ${x}, y: ${y}`);  
+//output: x:4 , y:3
+
+let a = 3;
+const b = ++3;       //this first increament the value of a and then assign in the b
+console.log(`a: ${a}, b: ${b}`); 
+//output: a:3 , b:4
+
+
+//link to study
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment

@@ -58,3 +58,30 @@ console.log(myFunction());
 
 //Here you can learn more about typeof
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+
+// ************************************************************************************************************
+
+//Memory in JS
+
+// 1.Stack (primitive) => gives copy of value,
+// 2. Heap(Non - primitve / Reference) => gives reference of value
+
+//Example: (stack memory)
+//let a = 10;
+//let b = a;        --> here we have given reference of a to b:      it copy value of a in b
+//a = 20;                   //changed the value of a
+//console.log(a); //20
+//console.log(b); //10       => although we change the value of (reference - a). but value in (b) is still same because it got the copy of a
+
+//Example: (Heap memory)
+let userOne = {
+  name: "Shazil Khan",
+  email: "shazil.akn@gmail.com",
+};
+
+let userTwo = userOne;
+
+userTwo.email = "akn.shazil@gmail.com"; //=> changed the value in userTwo
+console.log(userOne.email); //akn.shazil@gmail.com              => see! value also changed in userOne
+
+// ************************************************************************************************************

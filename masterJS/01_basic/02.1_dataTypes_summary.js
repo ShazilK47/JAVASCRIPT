@@ -2,6 +2,10 @@
 //like.. in C: call by reference and call by value
 
 // ## Note: JavaScript is dynamically type language.
+// ## Note: JavaScript is loosely type language.
+//avaScript is a dynamically typed language, which means that
+// data types of variables are determined by the value they hold at runtime
+//and can change throughout the program as we assign different values to them.
 
 // 1. Primitive datatypes
 // 2. Non primitive datatypes  / Reference datatypes

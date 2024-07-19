@@ -21,3 +21,22 @@ console.log(myAllFriends); //this will print the new array
 
 const myFriends = [...myCloseFriends, ...myOtherFriends];
 console.log(myFriends); //this will print the new array with all the elements of both arrays combined
+
+const another_Array = [2, 4, 5, [4, 2, 4, [4, 5, 5], 5], 3, 5, 2, [3, 3, [3]]];
+//to convert above array into one single array
+//we can use the falt operator
+const myNewArray = another_Array.flat(3);
+console.log(myNewArray);
+
+//to check is array?
+console.log(Array.isArray("Shazil Khan"));
+console.log(Array.from("Shazil Khan"));
+console.log(Array.from({ name: "Shazil" })); //=> returns empty array        :imp
+//we have to tell it either make array of keys or values of an object
+
+//TO make array of more values
+let score1 = 100;
+let score2 = 200;
+let score3 = 300;
+
+console.log(Array.of(score1, score2, score3));

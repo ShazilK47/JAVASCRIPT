@@ -29,6 +29,7 @@ const JSUser = {
 
 //to access object properties
 //there are to ways
+
 //1. dot notation
 // JSUser.name
 
@@ -51,3 +52,29 @@ const logIn = {
 console.log(logIn);
 console.log(`Name: ${logIn["Name"]}`);
 console.log(`Password: ${logIn[password]}`);
+
+Object.freeze(logIn); //freeze the object as we cannot change its properties
+
+//we can also add  or update properties in  an object like this
+//Object.key = value;
+//let's do some practice
+
+const registerUser = {
+  name: "Shazil Khan",
+  age: 21,
+  email: "shazil@gmail.com",
+  password: "12345",
+};
+//we can add a new property in an object like this
+registerUser.location = "Karachi";
+registerUser.email = "shazil@google.com";
+registerUser["age"] = 22;
+registerUser.welcome = function () {
+  console.log("Welcome to my website");
+};
+registerUser.weclomeTwo = function () {
+  console.log(`Welcome ${this.name} to my website`); //for reference the same object we use this object
+};
+console.log(registerUser);
+console.log(registerUser.welcome());
+console.log(registerUser.weclomeTwo());

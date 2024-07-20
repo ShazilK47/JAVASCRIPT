@@ -11,6 +11,10 @@ function add(num1, num2) {
   return num1 + num2;
 }
 
+//add => reference
+//() => execution
+//add();   => reference + execution: to execute function
+
 let addition = add(4, 6); //arguments
 console.log(addition); //10
 

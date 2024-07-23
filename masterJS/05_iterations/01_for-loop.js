@@ -28,13 +28,31 @@ for (let i = 0; i <= 10; i++) {
 //printing table from 1 to 10(using nested loops)
 
 for (let i = 1; i <= 10; i++) {
+  console.log(`\nTABLE Of: ${i}`);
   for (let j = 1; j <= 12; j++) {
-    if (j == 12) {
-      console.log(`${i} * ${j} = ${i * j}`);
-      console.log(`\n`);
-    }
     console.log(`${i} * ${j} = ${i * j}`);
   }
 }
 
 //break and continue
+
+//break;
+for (i = 0; i < 10; i++) {
+  if (i == 5) {
+    console.log(`detected 5`);
+    break;
+  }
+  console.log(`Value of i : ${i}`);
+}
+//NOte: when i == 5; the loops stop
+
+console.log(`\n`);
+//Continue;
+
+for (i = 0; i < 10; i++) {
+  if (i == 5) {
+    console.log(`detected 5`);
+    continue; //when i ==5; the loop execute the code inside condition and continue further
+  }
+  console.log(`Value of i : ${i}`);
+}

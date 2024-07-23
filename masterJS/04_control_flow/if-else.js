@@ -1,6 +1,18 @@
 //if-else
-
+//Syntax
 if (true) {
+}
+
+//conditions: < , > , == , != , ===(strict operator), !==  => check the values as well as it's type
+//eg. of strict operator
+if (2 == "2") {
+  console.log(`2 = "2": true`);
+}
+
+if (2 === "2") {
+  console.log(`2 === "2": true`);
+} else {
+  console.log(`2 === "2": False`);
 }
 
 //short form

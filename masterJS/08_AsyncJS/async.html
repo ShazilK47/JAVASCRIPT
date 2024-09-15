@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async JS</title>
+  </head>
+  <body>
+    <h1>Async JS (setTimeOut)</h1>
+
+    <h3>Hello <span id="name">UserName</span></h3>
+    <button>Stop</button>
+  </body>
+
+  <script>
+    let name = document.querySelector("#name");
+    let button = document.querySelector("button");
+
+    const greetName = function () {
+      name.innerHTML = `Shazil Khan`;
+    };
+
+    let stimeout = setTimeout(greetName, 2000);
+
+    button.addEventListener("click", function () {
+      clearTimeout(stimeout);
+    });
+  </script>
+</html>

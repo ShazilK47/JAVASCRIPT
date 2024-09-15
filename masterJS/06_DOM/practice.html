@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Practice</title>
+  </head>
+  <body>
+    <h2>Learning DOM (Document Object Model)</h2>
+    <p>
+      DOM is a documentt object model in JS through which we can manipulate html
+      and css
+    </p>
+
+    <h4>let's do it</h4>
+    <h4>let's do it</h4>
+    <h4>let's do it</h4>
+    <h4>let's do it</h4>
+
+    <input type="password" id="password" placeholder="Enter password" />
+
+    <ul>
+      <li class="list-item">one</li>
+      <li class="list-item">two</li>
+      <li class="list-item">three</li>
+      <li class="list-item">four</li>
+    </ul>
+
+    <script>
+      let body = document.querySelector("body");
+      body.style.backgroundColor = "#212121";
+      body.style.color = "#fff";
+
+      document.querySelector("h2").innerHTML =
+        "Learning Document Object Model (DOM)";
+      let title = document.querySelector("h2");
+      title.style.backgroundColor = "green";
+      title.style.borderRadius = "10px";
+      title.style.padding = "10px";
+
+      let listli = document.querySelectorAll("li");
+      listli.forEach(function (item) {
+        item.style.backgroundColor = "blue";
+        item.style.border = "2px solid black";
+        item.style.margin = "10px";
+        item.style.padding = "5px";
+        item.style.textAlign = "center";
+      });
+
+      listli[0].style.fontWeight = "900";
+      listli[0].style.fontSize = "30px";
+      listli[0].style.color = "black";
+
+      let listitems = document.getElementsByClassName("list-item");
+
+      //to convert html collection list or html collection into an array
+
+      arrlist = Array.from(listitems);
+    </script>
+  </body>
+</html>
+
+<!----short cut keys-->
+<!----ctrl + /-->
+comment out the line
+<!----ctrl + shift + / -->
+comment out the block of code
+<!----ctrl + shift + > -->
+indent the line
+<!----ctrl + shift + < -->
+unindent the line
+<!----ctrl + shift + F -->
+format the code
+<!----ctrl + shift + alt -->
+create more then one cursor
+<!----ctrl + D -->
+select all accurance of a word(all similar words)
+<!----ctrl + shift + L -->

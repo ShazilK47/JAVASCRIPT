@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-changer {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  left: 93%;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  box-shadow: 2px 2px 2px black;
+  transition: 0.5s;
+}
+
+.bg-changer:hover {
+  transform: scale(1.1);
+}
+
+.clock {
+  height: 300px;
+  width: 300px;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: auto;
+  position: relative;
+  margin-top: 25vh;
+  background-color: black;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.884) !important ;
+  margin-bottom: 10px;
+}
+
+.count {
+  font-size: 70px;
+  font-weight: 600;
+
+  color: white;
+}
+
+#start,
+#stop,
+#reset {
+  width: 80px;
+  border-radius: 15px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  margin-right: 0.8rem;
+  padding: 1rem;
+  font-weight: 700;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.726) !important;
+  transition: 0.3s;
+  font-weight: 900;
+}
+
+#start:hover {
+  background-color: green !important;
+  color: white !important;
+  transform: scale(1.03);
+}
+
+#stop:hover {
+  background-color: red !important;
+  color: white !important;
+  transform: scale(1.03);
+}
+#reset:hover {
+  background-color: blue !important;
+  color: white !important;
+  transform: scale(1.03);
+}
+
+.buttons {
+  margin: 1rem;
+  margin-left: 2rem;
+}

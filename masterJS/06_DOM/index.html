@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Learning</title>
+    <style>
+      .bg-black {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <div>
+      <h1 id="title" class="heading">Document Object Model (DOM) Learning</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <script>
+      document.getElementById("title").getAttribute("title"); //=> to get attribute title
+      document.getElementById("title").id; // => to get the id
+      document.getElementById("title").className; //=> to get the class
+      document.getElementById("title").setAttribute("class", "test"); //=> to set the attribute
+      const title = document.getElementById("title"); // => to get element by id
+      title.style.backgroundColor = "green"; //  =>to add styling
+      title.style.padding = "15px";
+      title.style.borderRadius = "10px";
+
+      //how to get content
+      title.textContent; //to get all the content
+      title.innerText; //only give the visible text , with styling
+      title.innerHTML; //gives the html tags as well, while textContent and inner text does'nt give/support html tags
+
+      //other
+      document.querySelector("h1"); //=> gives the first <h1> from the page.
+      document.querySelector("#title"); //=> to select id
+      document.querySelector(".heading"); //=> to select
+
+      document.querySelector("input"); //=> to select input element
+      document.querySelector('input[type="password"]'); //=> to select attributes of input elements we se: element[attributename= 'value']
+    </script>
+  </body>
+</html>

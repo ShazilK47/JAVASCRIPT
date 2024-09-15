@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Relations</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+
+    <script>
+      // Get the parent element
+
+      let parent = document.querySelector(".parent");
+      console.log(parent);
+
+      console.log(parent.children);
+      console.log(parent.children[0]);
+
+      //using for loop on html collection
+      for (let i = 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML);
+      }
+
+      console.log(parent.firstElementChild);
+      console.log(parent.lastElementChild);
+      console.log("\n");
+
+      //now we can also access parent using child
+      let dayOne = document.querySelector(".day");
+      console.log(dayOne);
+      console.log(dayOne.parentElement);
+      console.log(dayOne.nextElementSibling.innerHTML); //select the next element sibling i.e Tuesday.
+
+      //Nodes
+      console.log("NODES: ", parent.childNodes);
+    </script>
+  </body>
+</html>

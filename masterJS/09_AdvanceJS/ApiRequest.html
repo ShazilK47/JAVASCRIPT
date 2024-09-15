@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api Request</title>
+  </head>
+  <body style="background-color: #212121">
+    XMLHTTP Request states: 0. Unset 1. Opened, open() has been called 2.
+    HEADERS Received, send() has been called. 3. LOADING , downloading , partial
+    data 4. Done , operation completed
+
+    <script>
+      //first create an xmlhttprequest object
+      let xhr = new XMLHttpRequest();
+      let requestURL = "https//www.google.com";
+      xhr.open("GET", requestURL); // containes two paremeters: methods, url
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+          const data = JSON.parse(xhr.responseText); //--> note: most of the time the response might be in string. we have to convert in into json like this
+          console.log(typeof data); //to check the type of data
+          console.log(data.name);
+        }
+      };
+      //console.log(xhr.readyState); //check the ready state
+
+      xhr.send(); //opened has be called
+    </script>
+  </body>
+</html>

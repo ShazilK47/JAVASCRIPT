@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  border: none;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 4px black;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.box:hover {
+  box-shadow: 2px 2px 8px black;
+  transform: scale(1.1);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 20%;
+  margin-bottom: -16%;
+}
+
+h3 {
+  margin-top: -16%;
+  text-align: center;
+  line-height: 2rem;
+}

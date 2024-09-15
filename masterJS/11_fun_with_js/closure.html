@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closures</title>
+  </head>
+  <body style="background-color: #313131">
+    <h1>Closures</h1>
+    <button id="red">red</button>
+    <button id="green">green</button>
+    <script>
+      function clickHandler(color) {
+        //lexical scoping: => the inner funciton can access the variable (color)
+        return function () {
+          //returns the whole lexical scope . with the function
+          document.body.style.backgroundColor = `${color}`;
+        };
+      }
+
+      document.getElementById("red").onclick = clickHandler("red");
+      document.getElementById("green").onclick = clickHandler("green");
+    </script>
+  </body>
+</html>

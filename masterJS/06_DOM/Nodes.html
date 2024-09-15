@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NODES</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <script>
+      const div = document.createElement("div");
+      console.log(div);
+
+      div.className = "main";
+      div.id = "container";
+      div.setAttribute("title", "cont");
+
+      //two methods to add text to the div
+      //1.
+      div.innerHTML = "<h3>lets continue with the challenge<br></h3>";
+      //2.
+      let addText = document.createTextNode("Hello world"); //will not override the text
+      div.appendChild(addText);
+      //   div.innerHTML = "hii how are you"; => override the text
+
+      div.style.backgroundColor = "green";
+      div.style.padding = "10px";
+      div.style.width = "100%";
+      div.style.textAlign = "center";
+
+      document.body.appendChild(div);
+
+      //ok now let's create a function that can create and style element;
+      function elementCreater(
+        name,
+        text = "",
+        className = "",
+        id = "",
+        color = "",
+        backColor = "",
+        width = "",
+        height = "",
+        padding = ""
+      ) {
+        const element = document.createElement(`${name}`);
+        element.className = `${className}`;
+        element.id = `${id}`;
+        element.innerHTML = `${text}`;
+        element.style.backgroundColor = `${backColor}`;
+        element.style.padding = `${padding}`;
+        element.style.width = `${width}`;
+        element.style.height = `${height}`;
+        element.style.color = `${color}`;
+
+        document.body.appendChild(element);
+      }
+
+      elementCreater(
+        "h2",
+        "Hello World",
+        "main",
+        "title",
+        "#fff",
+        "black",
+        "100%",
+        "",
+        "10px"
+      );
+    </script>
+  </body>
+</html>

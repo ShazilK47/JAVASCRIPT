@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit or remove Elements</title>
+  </head>
+  <body style="background: #212121; color: #fff">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+
+    <script>
+      function addLanguage(langName) {
+        const li = document.createElement("li");
+        li.innerHTML = `${langName}`;
+
+        document.querySelector(".language").appendChild(li);
+      }
+
+      //optimize way
+      function addOptiLang(langName) {
+        const li = document.createElement("li");
+
+        li.appendChild(document.createTextNode(`${langName}`));
+        document.querySelector(".language").appendChild(li);
+      }
+      addLanguage("Python");
+      addLanguage("php");
+      addOptiLang("Java");
+
+      //Edit
+      const secondLang = document.querySelector("li:nth-child(2)");
+      //  secondLang.innerHTML = "Mojo";   -> can also be this way.
+      let newli = document.createElement("li");
+      newli.textContent = "C++"; // -> use "textContent"  to add text inside the element
+      secondLang.replaceWith(newli); //--> "replaceWidth()"  to replace the inside text
+
+      //Edit -> using outerHTML
+      const firstLang = document.querySelector("li:first-child");
+      firstLang.outerHTML = "<li>Python</li>";
+
+      //remove
+      const lastLang = document.querySelector("li:last-child");
+      lastLang.remove();
+    </script>
+  </body>
+</html>

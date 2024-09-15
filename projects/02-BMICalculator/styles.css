@@ -1,0 +1,80 @@
+body {
+  background-image: url(bodyfit.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-shadow: 2px 2px 4px black;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 60%;
+  width: 30%;
+  padding: 3rem;
+  color: #fff;
+  box-shadow: 2px 2px 4px black;
+}
+
+label {
+  margin-bottom: -15px;
+}
+
+#form > h3 {
+  margin-top: -2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 800;
+  font-size: 26px;
+}
+
+button {
+  margin-top: 1rem;
+}
+
+#weight-guide {
+  margin-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.808);
+  width: 100%;
+  text-align: center;
+}
+
+#weight-guide h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+#weight-guide > p {
+  line-height: 10px;
+}
+
+#results {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -30px;
+}
+
+.check {
+  position: relative;
+  display: inline-block;
+  top: 30px;
+  text-align: center;
+}

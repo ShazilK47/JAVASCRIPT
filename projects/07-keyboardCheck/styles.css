@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #113b39;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  border: 1px solid black;
+  margin: auto;
+  background-color: black;
+  box-shadow: 2px 2px 4px black;
+  border-radius: 5px;
+}
+
+table tr,
+td {
+  height: 50px;
+  width: 100px;
+  text-align: center;
+}
+
+table td {
+  background-color: white;
+  color: black;
+}
+
+#insert {
+  margin: auto;
+  display: inline-flex;
+}

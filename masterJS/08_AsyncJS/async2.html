@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>set Interval</title>
+  </head>
+  <body>
+    <h1>Let's continue with learning Programming</h1>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <ul id="ul"></ul>
+
+    <script>
+      let start = document.querySelector("#start");
+      let stop = document.querySelector("#stop");
+      let ul = document.querySelector("#ul");
+
+      //  let ul = document.createElement("ul");
+      let li = document.createElement("li");
+
+      let progLang = function () {
+        li.innerHTML = "JavaScript";
+        ul.appendChild(li);
+        console.log("prolang", Date.now());
+      };
+
+      start.addEventListener(
+        "click",
+        function (e) {
+          setInterval(progLang, 1000);
+          console.log("clicked the button");
+        },
+        false
+      );
+
+      //   let intervalset = setInterval(progLang, 1000);
+      stop.addEventListener("click", function (e) {
+        clearInterval(timeinter);
+        console.log("clicked thes top button");
+      });
+      let timeinter = setInterval(progLang, 1000);
+      clearInterval(timeinter);
+    </script>
+  </body>
+</html>
